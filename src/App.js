@@ -33,6 +33,8 @@ function App() {
     <div className="App">
       <div className="title">DEMO PDFMAKE</div>
       <button onClick={createPDF} className="btn-Generate">Generate PDF</button>
+      <br/>
+      <a href={url} target="blank">{url}</a>
       {url && (
         <div>
           <object

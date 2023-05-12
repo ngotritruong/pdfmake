@@ -1,5 +1,20 @@
-import instalImage from "./images/install.png";
+import image from './images/install.png'
 const docDefinition = {
+  info: {
+    title: "PDFMake",
+    author: "Trun",
+    subject: "subject of document",
+    keywords: "keywords for document",
+  },
+  pageSize: "A4",
+  watermark: {
+    text: "HDBank",
+    color: "orange",
+    opacity: 0.3,
+    bold: true,
+    italics: false,
+    fontSize: 55,
+  },
   content: [
     {
       text: "TÌM HIỂU VỀ PDFMAKE",
@@ -31,19 +46,26 @@ const docDefinition = {
     },
     { text: "2. Ưu và nhược điểm.", fontSize: 13, lineHeight: 1.5 },
     {
-        style: 'tableExample',
-        table: {
-            headerRows: 1,
-            body: [
-                [{text: 'Ư điểm', style: 'tableHeader'}, {text: 'Nhược điểm', style: 'tableHeader'}],
-                [
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                ]
-            ]
-        }
+      style: "tableExample",
+      table: {
+        headerRows: 1,
+        body: [
+          [
+            { text: "Ư điểm", style: "tableHeader" },
+            { text: "Nhược điểm", style: "tableHeader" },
+          ],
+          [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          ],
+        ],
+      },
     },
-    { qr: 'text in QR',margin: [ 0, 60, 0, 0 ]  },
+    { qr: "text in QR", margin: [0, 60, 0, 0] },
+    {
+        image: image, // Đường dẫn đến hình ảnh
+        width: 200 // Chiều rộng của hình ảnh
+      },
   ],
   styles: {
     header: {
@@ -57,12 +79,11 @@ const docDefinition = {
       lineHeight: 1.5,
     },
     tableHeader: {
-
-        bold: true,
-        fontSize: 13,
-        color: 'black',
-        alignment: "center",
-    }
+      bold: true,
+      fontSize: 13,
+      color: "black",
+      alignment: "center",
+    },
   },
 };
 
